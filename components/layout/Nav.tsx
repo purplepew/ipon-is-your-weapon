@@ -56,17 +56,6 @@ const Nav = ({ pathname }: { pathname: string }) => {
                     )
                 })}
 
-                <Typography
-                    variant='caption'
-                    sx={{
-                        ml: 'auto',
-                        color: 'text.secondary',
-                        whiteSpace: 'nowrap',
-                        pl: 2,
-                    }}
-                >
-                    Dummy nav with MUI buttons
-                </Typography>
             </Stack>
         </Box>
     )
