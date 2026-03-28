@@ -1,5 +1,6 @@
 'use client'
 import { CssBaseline, ThemeProvider, createTheme } from "@mui/material"
+import { orbitron, funnel_display} from "@/theme/theme" 
 
 const theme = createTheme({
   palette: {
@@ -42,6 +43,11 @@ const theme = createTheme({
           color: '#e7e9ef'
         }
       }
+    }
+  },
+  typography: {
+    h4: {
+      fontFamily: funnel_display.style.fontFamily
     }
   }
 })
