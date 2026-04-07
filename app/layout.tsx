@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Providers from "./Providers";
+import Sections from "@/components/layout/Sections";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,6 +28,7 @@ export default function RootLayout({
       <body>
         <Providers>
           {children}
+          <Sections /> 
         </Providers>
       </body>
     </html>

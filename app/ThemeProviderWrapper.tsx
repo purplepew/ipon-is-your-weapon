@@ -1,6 +1,7 @@
 'use client'
 import { CssBaseline, ThemeProvider, createTheme } from "@mui/material"
-import { orbitron, funnel_display} from "@/theme/theme" 
+
+const defaultTheme = createTheme()
 
 const theme = createTheme({
   palette: {
@@ -43,13 +44,33 @@ const theme = createTheme({
           color: '#e7e9ef'
         }
       }
-    }
+    },
   },
   typography: {
-    h4: {
-      fontFamily: funnel_display.style.fontFamily
-    }
-  }
+    
+    h1: {
+      [defaultTheme.breakpoints.up('xs')]: {
+        fontSize: '3rem',
+      },
+      [defaultTheme.breakpoints.up('lg')]: {
+        fontSize: '4rem',
+      },
+      [defaultTheme.breakpoints.up('xl')]: {
+        fontSize: '6rem'
+      },
+    },
+    h2: {
+       [defaultTheme.breakpoints.up('xs')]: {
+        fontSize: '1.50rem',
+      },
+      [defaultTheme.breakpoints.up('lg')]: {
+        fontSize: '1.75rem',
+      },
+      [defaultTheme.breakpoints.up('xl')]: {
+        fontSize: '3.75rem',
+      },
+    },
+  },
 })
 
 const ThemeProviderWrapper = ({ children }: { children: React.ReactNode }) => {

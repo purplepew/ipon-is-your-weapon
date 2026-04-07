@@ -1,4 +1,5 @@
 'use client'
+import { funnel_display } from '@/theme/theme'
 import { ArrowRightSharp } from '@mui/icons-material'
 import { Box, Button, Stack, Typography } from '@mui/material'
 import Image from 'next/image'
@@ -6,7 +7,12 @@ import Image from 'next/image'
 const Page = () => {
 
   return (
-    <Stack direction={{ xs: 'column', md: 'row' }} bgcolor='#2a1d19'>
+    <Stack
+      direction={{ xs: 'column', md: 'row' }}
+      bgcolor='#2a1d19'
+      padding={{ xs: '0', md: '0 5rem' }}
+      component='section'
+    >
       <Box
         sx={{
           width: '100%',
@@ -26,8 +32,9 @@ const Page = () => {
           }}
         >
           <Typography
-            variant='body1'
+            component='span'
             sx={{
+              fontSize: { xs: 'body2.fontSize', lg: 'body1.fontSize' },
               backgroundColor: '#4b221b',
               border: '1px solid rgb(224, 112, 68)',
               color: '#d39085',
@@ -40,14 +47,19 @@ const Page = () => {
         </Box>
 
         <Typography
-          variant="h4"
+          component='h1'
+          variant='h1'
           sx={{
-            fontSize: '5rem',
             textTransform: 'uppercase',
+            fontFamily: funnel_display.style.fontFamily
           }}
-        >Engineered For <Box color='#ffb5a0'>Authority.</Box></Typography>
+        >Engineered For <span style={{ color: '#ffb5a0' }}>Authority.</span></Typography>
 
-        <Typography variant='body1'>Experience unyielding precision with the new APX-9 Tactical series. Now available for professional deployment.</Typography>
+        <Typography 
+        component='p'
+        variant='body1'
+        >Experience unyielding precision with the new APX-9 Tactical series pistol. Now available for professional deployment.
+        </Typography>
 
         <Stack spacing={2} direction='row'> {/* BUTTONS */}
           <Button
@@ -84,7 +96,7 @@ const Page = () => {
       }}>
         <Image
           src="https://raw.githubusercontent.com/purplepew/image-host-for-ecommerce/refs/heads/main/black-pistol.jpg"
-          alt="black pistol"
+          alt="APX-9 Tactical Series black pistol"
           height="650"
           width="650"
           style={{
@@ -95,7 +107,7 @@ const Page = () => {
           }}
         />
       </Box> {/*   END HERO COL 2 */}
-    </Stack>
+    </Stack >
   )
 }
 
