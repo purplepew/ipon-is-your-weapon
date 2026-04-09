@@ -37,6 +37,7 @@ The typography strategy balances high-tech precision with human-centric readabil
 *   **Display & Headlines (Space Grotesk):** This typeface offers a clean, geometric, and "engineered" feel. Use `display-lg` for hero statements with tight letter-spacing (-0.02em) to convey bold authority.
 *   **Body & Labels (Manrope):** A highly legible sans-serif that balances the aggressive headlines. Its modern proportions ensure that technical specifications and product descriptions feel accessible and professional.
 *   **The Hierarchy of Trust:** Use `headline-sm` for product titles to maintain weight, while using `label-md` in `on-surface-variant` (#E4BEB4) for technical specs (e.g., "Caliber," "Weight," "Capacity").
+*   **Responsive Typography Guardrail:** Keep the existing responsive breakpoint behavior and fluid scaling in the theme unless a task explicitly asks to change it. Design tasks should improve typographic tone, hierarchy, spacing, and readability without redefining the breakpoint system.
 
 ---
 
@@ -78,9 +79,11 @@ In this system, depth is "baked-in" through tonal layering rather than artificia
 *   **Do** use asymmetrical layouts in the Hero section to mimic high-end editorial magazines.
 *   **Do** leverage "Negative Space" as a luxury feature. High-end products need room to breathe.
 *   **Do** use `primary` (#FFB5A0) exclusively for "Money" actions (Add to Cart, Checkout).
+*   **Do** keep the current responsive typography scale intact and refine it in place when improving the theme.
 
 ### Don't
 *   **Don't** use 1px borders to separate content sections. It breaks the immersive dark theme.
 *   **Don't** use pure white (#FFFFFF) for text. Use `on-surface` (#E5E2E1) to reduce eye strain and maintain the sophisticated atmosphere.
 *   **Don't** use standard "Drop Shadows." Use tonal layering first; if shadows are needed, keep them diffused and atmospheric.
 *   **Don't** use rounded corners above `xl` (0.75rem). This is a tactical system; it should feel sharp and intentional, not "bubbly" or friendly.
+*   **Don't** alter typography breakpoints or responsiveness as part of a general design pass unless the request specifically calls for it.
